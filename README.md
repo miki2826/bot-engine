@@ -38,9 +38,11 @@ Each middleware is async and being passed `data` - which was passed on receive, 
 Calling callback with an `error` object will cancel current message lifecycle.
 
 ###Message Lifecycle
-`receive --> receiver middleware --> decide --> 
+```
+receive --> receiver middleware --> decide --> 
     validateMove --> pre move middleware --> 
-        move ---> emit state name --> post move middleware`
+        move ---> emit state name --> post move middleware
+```
 
 ##API
 
